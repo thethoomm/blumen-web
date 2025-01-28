@@ -1,6 +1,6 @@
 import { Button } from "@/components/button";
 
-export default function Home() {
+export function Hero() {
   return (
     <section className="h-full bg-gray flex flex-row justify-between relative">
       <img
