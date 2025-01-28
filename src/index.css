@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.container-lg {
+  @apply max-w-[1780px] mx-auto w-full px-4
+}
+
 @theme {
   --color-primary-lunar: hsla(114, 16%, 24%, 1);
   --color-primary-avacado: hsla(83, 18%, 52%, 1);
