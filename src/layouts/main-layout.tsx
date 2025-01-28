@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 
 export default function MainLayout() {
     return (
-        <div>
+        <div className="bg-white">
             <Navbar />
             <main className="min-h-screen">
                 <Outlet />
