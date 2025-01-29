@@ -1,5 +1,5 @@
 export type Plant = {
-  id: number;
+  id?: number;
   title: string;
   subtitle: string;
   tags: string;
@@ -10,6 +10,6 @@ export type Plant = {
   description: string;
   imageUrl: string;
   plantTypeId: number;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 };
