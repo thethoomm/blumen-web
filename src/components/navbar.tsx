@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/button";
-import { MenuIcon } from "@/components/icons/menu";
 
 const items = [
   {
@@ -55,7 +55,7 @@ export function Navbar() {
         <Button variant="outline" className="hidden md:block">Entrar</Button>
 
         <button className="block md:hidden" onClick={toogleMobileMenu}>
-          <MenuIcon />
+          <Menu />
         </button>
       </nav>
 
