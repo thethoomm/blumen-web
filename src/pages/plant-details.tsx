@@ -76,7 +76,7 @@ export default function PlantDetails() {
               <h4 className="font-lato font-bold text-2xl text-black">
                 Features
               </h4>
-              <ul className="flex flex-col pl-4 list-disc list-inside">
+              <ul className="flex flex-col flex-wrap pl-4 list-disc list-inside">
                 {plant.characteristics
                   .split(",")
                   .map((characteristc, index) => (
@@ -94,7 +94,7 @@ export default function PlantDetails() {
               <h4 className="font-lato font-bold text-2xl text-black">
                 Description
               </h4>
-              <p className="font-raleway">{plant.description}</p>
+              <p className="font-raleway line-clamp-6">{plant.description}</p>
             </div>
           </div>
         </div>
