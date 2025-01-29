@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchAllPlants } from "@/api/plant";
-import { PlantsCaroussel } from "@/components/plants-caroussel";
+import { PlantsCarousel } from "@/components/plants-carousel";
 import { Plant } from "@/types/plant";
 
 export function Store() {
@@ -28,7 +28,7 @@ export function Store() {
           </h1>
         </header>
         <main>
-          <PlantsCaroussel plants={plants} />
+          <PlantsCarousel plants={plants} />
         </main>
       </div>
 
@@ -39,7 +39,7 @@ export function Store() {
           </h1>
         </header>
         <main>
-          <PlantsCaroussel plants={inSalePlants} />
+          <PlantsCarousel plants={inSalePlants} />
         </main>
       </div>
     </section>

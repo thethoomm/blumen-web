@@ -16,7 +16,7 @@ export function PlantCard({ plant }: PlantCardProps) {
   return (
     <div
       onClick={handleNavigate}
-      className="cursor-pointer min-w-sm h-[590px] flex flex-col shadow-md transition-all duration-200 ring-2 ring-transparent hover:-translate-4 hover:ring-2 hover:ring-primary-avacado hover:shadow-2xl"
+      className="cursor-pointer min-w-sm h-[590px] flex flex-col shadow-md transition-all duration-200 ring-2 ring-transparent hover:-translate-4 hover:ring-2 hover:ring-primary-avacado"
     >
       <img
         src={plant.imageUrl}
