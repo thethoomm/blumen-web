@@ -5,6 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 
 interface PlantsCarouselProps {
   plants: Plant[];
+  isLoading?: boolean;
 }
 
 const responsive = {
@@ -18,17 +19,23 @@ const responsive = {
   },
 };
 
-export function PlantsCarousel({ plants }: PlantsCarouselProps) {
+export function PlantsCarousel({ plants, isLoading }: PlantsCarouselProps) {
   return (
     <Carousel
       responsive={responsive}
-      
       itemClass="px-4"
       containerClass="py-12 px-6"
     >
-      {plants.map((plant) => (
-        <PlantCard key={plant.id} plant={plant} />
-      ))}
+      {isLoading
+        ? Array(4)
+            .fill(null)
+            .map((_, index) => (
+              <div
+                key={`placeholder-${index}`}
+                className="min-w-sm h-[590px] bg-gray-200 animate-pulse rounded-lg"
+              ></div>
+            ))
+        : plants.map((plant) => <PlantCard key={plant.id} plant={plant} />)}
     </Carousel>
   );
 }

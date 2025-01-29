@@ -5,12 +5,15 @@ import { Plant } from "@/types/plant";
 
 export function Store() {
   const [plants, setPlants] = useState<Plant[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true)
       const response = await fetchAllPlants();
 
       setPlants(response);
+      setIsLoading(false)
     };
 
     fetchData();
@@ -28,7 +31,7 @@ export function Store() {
           </h1>
         </header>
         <main>
-          <PlantsCarousel plants={plants} />
+          <PlantsCarousel plants={plants} isLoading={isLoading}/>
         </main>
       </div>
 
@@ -39,7 +42,7 @@ export function Store() {
           </h1>
         </header>
         <main>
-          <PlantsCarousel plants={inSalePlants} />
+          <PlantsCarousel plants={inSalePlants} isLoading={isLoading}/>
         </main>
       </div>
     </section>
