@@ -20,4 +20,6 @@
   --font-raleway: "Raleway", serif;
   --font-lato: "Lato", sans-serif;
   --font-inter: "Inter", sans-serif;
+
+  --breakpoint-3xl: 120rem;
 }

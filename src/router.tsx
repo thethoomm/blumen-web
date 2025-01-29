@@ -3,6 +3,7 @@ import MainLayout from "@/layouts/main-layout";
 import Home from "@/pages/home";
 import PlantDetails from "@/pages/plant-details";
 import NotFound from "@/pages/not-found";
+import Register from "@/pages/register";
 
 export function Router() {
   return (
@@ -10,6 +11,7 @@ export function Router() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/products/:plantId" element={<PlantDetails />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
