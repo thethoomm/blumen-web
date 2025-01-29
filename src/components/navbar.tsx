@@ -30,8 +30,8 @@ export function Navbar() {
   }
 
   return (
-    <header className="w-full">
-      <nav className="container-lg flex items-center justify-between">
+    <header className="w-full bg-gray">
+      <nav className="container-lg flex items-center justify-between py-3">
         <img
           src="/assets/logo.svg"
           alt="Blumen logo"

@@ -4,9 +4,9 @@ import { Footer } from "@/components/footer";
 
 export default function MainLayout() {
     return (
-        <div>
+        <div className="bg-white h-full w-screen overflow-x-hidden">
             <Navbar />
-            <main className="min-h-screen">
+            <main className="min-h-screen h-full">
                 <Outlet />
             </main>
             <Footer />

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import 'react-multi-carousel/lib/styles.css';
 
 .container-lg {
   @apply max-w-[1780px] mx-auto w-full px-4
