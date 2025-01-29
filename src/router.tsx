@@ -5,12 +5,14 @@ import PlantDetails from "@/pages/plant-details";
 import NotFound from "@/pages/not-found";
 import Register from "@/pages/register";
 import AboutUs from "@/pages/about-us";
+import Products from "@/pages/products";
 
 export function Router() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/products/:plantId" element={<PlantDetails />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about-us" element={<AboutUs />} />
