@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { Menu } from "lucide-react";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 import { Button } from "@/components/button";
 
 const items = [
@@ -52,7 +58,16 @@ export function Navbar() {
           ))}
         </ul>
 
-        <Button variant="outline" className="hidden md:block">Entrar</Button>
+        <SignedOut>
+          <SignInButton>
+            <Button variant="outline" className="hidden md:block">
+              Entrar
+            </Button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
 
         <button className="block md:hidden" onClick={toogleMobileMenu}>
           <Menu />
@@ -73,7 +88,16 @@ export function Navbar() {
           ))}
         </ul>
 
-        <Button variant="outline">Entrar</Button>
+        <SignedOut>
+          <SignInButton>
+            <Button variant="outline" className="hidden md:block">
+              Entrar
+            </Button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </nav>
     </header>
   );
