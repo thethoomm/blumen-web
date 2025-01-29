@@ -3,10 +3,10 @@ import clsx from "clsx";
 import { tv, VariantProps } from "tailwind-variants";
 
 const buttonStyles = tv({
-  base: "w-fit font-raleway py-2 px-4 font-medium cursor-pointer",
+  base: "w-fit font-raleway py-2 px-4 font-medium cursor-pointer transition-colors duration-100",
   variants: {
     variant: {
-      default: "bg-primary-lunar text-athena-gray",
+      default: "bg-primary-lunar text-athena-gray hover:bg-primary-lunar/90",
       outline:
         "text-primary-lunar hover:text-primary-avacado border border-primary-lunar hover:border-primary-avacado",
     },
