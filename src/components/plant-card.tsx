@@ -25,7 +25,7 @@ export function PlantCard({ plant }: PlantCardProps) {
       />
       <div className="bg-white flex flex-col gap-6 p-6">
         <div className="flex flex-col gap-1.5">
-          <p className="font-lato text-2xl font-bold text-primary-lunar">
+          <p className="font-lato text-2xl font-bold text-primary-lunar line-clamp-1">
             {plant.title}
           </p>
           <div className="flex items-center gap-4">
