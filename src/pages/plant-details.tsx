@@ -7,17 +7,9 @@ import { formatCurrency } from "@/utils/formatCurrency";
 import { Badge } from "@/components/badge";
 
 export default function PlantDetails() {
+  const [plant, setPlant] = useState<Plant | null>(null);
   const { plantId } = useParams();
   const navigate = useNavigate();
-
-  if (!plantId) {
-    navigate("/not-found");
-    return;
-  }
-
-  const id = parseInt(plantId);
-
-  const [plant, setPlant] = useState<Plant | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,12 +21,20 @@ export default function PlantDetails() {
           setPlant(response);
         }
       } catch (error) {
+        console.log(error)
         navigate("/not-found");
       }
     };
 
+    if (!plantId) {
+      navigate("/not-found");
+      return;
+    }
+
+    const id = parseInt(plantId);
+
     fetchData();
-  }, []);
+  }, [plantId, navigate]);
 
   if (!plant) {
     return;
