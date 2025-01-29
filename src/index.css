@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import 'react-multi-carousel/lib/styles.css';
+
+.container-lg {
+  @apply max-w-[1780px] mx-auto w-full px-4
+}
+
+@theme {
+  --color-primary-lunar: hsla(114, 16%, 24%, 1);
+  --color-primary-avacado: hsla(83, 18%, 52%, 1);
+  --color-primary-accent: hsla(61, 48%, 75%, 1);
+  --color-secondary: hsla(70, 5%, 49%, 1);
+  --color-white: hsla(0, 0%, 99%, 1);
+  --color-black: hsla(240, 9%, 13%, 1);
+  --color-gray: hsla(80, 10%, 94%, 1);
+  --color-athena-gray: hsla(220, 27%, 98%, 1);
+
+  --font-pacifico: "Pacifico", serif;
+  --font-eb-garamond: "EB Garamond", serif;
+  --font-raleway: "Raleway", serif;
+  --font-lato: "Lato", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --breakpoint-3xl: 120rem;
+}
