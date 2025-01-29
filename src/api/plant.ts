@@ -13,3 +13,16 @@ export async function fetchAllPlants(): Promise<Plant[]> {
 
   return data;
 }
+
+
+export async function fetchPlantById(id: number): Promise<Plant> {
+  const res = await api.get<Plant>(`/plants/${id}`)
+
+  const { data, status } = res
+
+  if (status !== HttpStatusCode.Ok) {
+    throw new Error(`Error fetching plant: Status:${status}`);
+  }
+
+  return data
+}
